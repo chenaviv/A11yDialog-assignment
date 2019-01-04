@@ -1,0 +1,28 @@
+.A11yDialogCmp__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.A11yDialogCmp__backdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(21, 21, 21, 0.6);
+}
+
+.A11yDialogCmp__dialogContent {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* a less assuming alternative */
+/* .DialogCmp__dialogContent {
+  position: relative;
+} */

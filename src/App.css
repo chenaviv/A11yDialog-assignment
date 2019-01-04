@@ -1,3 +1,12 @@
+html, body {
+  box-sizing: border-box;
+  min-height: 300vh;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 .App {
   text-align: center;
 }
@@ -19,7 +28,66 @@
 }
 
 .App-link {
+  cursor: pointer;
   color: #61dafb;
+  background-color: #282c34;
+  border: 1px solid;
+  padding: 8px;
+  box-shadow: 0 5px 9px -5px;
+  transition: all 0.5s;
+}
+
+.App-link:focus {
+  transform: scale(1.5);
+}
+
+.App-mainDialog {
+  background: #282c34;
+  padding: 25px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-mainDialog > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.App-mainDialog input,
+.App-mainDialog select,
+.App-mainDialog textarea,
+.App-mainDialog button {
+  background: #6b6b6b;
+  border: 0;
+  border-bottom: 3px solid #929292;
+  width: 100%;
+  padding: 9px;
+  font-size: inherit;
+  color: gainsboro;
+  transition: all 0.3s, box-shadow 0.1s;
+}
+
+.App-mainDialog button {
+  cursor: pointer;
+  border: 3px solid #929292;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.App-mainDialog input:disabled,
+.App-mainDialog select:disabled,
+.App-mainDialog textarea:disabled,
+.App-mainDialog button:disabled {
+  background-color: #333333;
+  border-color: #404040;
+  color: #6b6b6b;
+}
+
+.App-mainDialog *:focus {
+  color: #282c34;
+  outline: 0;
+  background: #d0d0d0;
+  box-shadow: 0 0 0 3px #282c34, 0 0 1px 5px #61dafb;
 }
 
 @keyframes App-logo-spin {
